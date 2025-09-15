@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/ping', methods=['GET'])
-def ping(ping):
+def ping():
     # pinging the system to check if the server is running
     msg={'status':'running'}
 
@@ -20,4 +20,5 @@ def get_test(claim):
     return {'res':res}
 
 if __name__ == '__main__':
+
     app.run()
