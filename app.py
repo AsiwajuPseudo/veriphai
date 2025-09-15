@@ -12,6 +12,7 @@ CORS(app)
 def ping():
     # pinging the system to check if the server is running
     msg={'status':'running'}
+    return msg
 
 @app.route('/verify/<claim>', methods=['GET'])
 def get_test(claim):
@@ -22,3 +23,4 @@ def get_test(claim):
 if __name__ == '__main__':
 
     app.run()
+
